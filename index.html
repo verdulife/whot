@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="app">
+
+<head>
+    <!-- <script>
+        if (location.hostname !== "localhost" && location.protocol !== "https:") location.protocol = "https:";
+    </script> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Web assets -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#111">
+    <link rel="apple-touch-icon" type="image/png" href="./assets/img/mobile.png">
+    <link rel="icon" type="image/png" href="./assets/img/mobile.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <meta name="apple-mobile-web-app-title" content="whot">
+    <!-- Preload -->
+    <meta name="fragment" content="!">
+    <link rel="preload" href="./assets/css/main.css" as="style">
+    <link rel="preload" href="./assets/font/circular.css" as="style">
+    
+    <!--
+                                __              
+                               /\ \             
+       __   __    __    _  __  \_\ \    __  __  
+      /\ \/ \ \ /'__`\ /\`'__\ /'_` \  /\ \/\ \ 
+      \ \ \_/ |/\  __/ \ \ \/ /\ \_\ \ \ \ \_\ \
+       \ \___/ \ \____\ \ \_\ \ \___,_\ \ \____/
+        \/__/   \/____/  \/_/  \/__,_ /  \/___/   2018
+
+    -->
+    
+    <!-- SEO -->
+    <title>whot</title>
+    <meta name="author" content="verdu | verdu@live.com">
+    <meta name="description" content="The easiest fullstack framework! FAWN framework uses |F|irebase, |A|ngularJS, |W|ebpack & |N|ode. Fawn it!">
+    <meta name="keywords" content="easy, fullstack, framework, fawn, firebase, angularjs, webpack, node, javascript, code">
+    <meta property="og:site_name" content="whot">
+    <meta property="og:title" content="whot">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/verdulife/fawn/">
+    <meta property="og:image" content="https://github.com/verdulife/fawn/assets/img/mobile.png">
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <!-- Font / Icons -->
+    <link rel="stylesheet" href="./assets/font/circular.css">
+</head>
+
+<body>
+    <main ui-view class="fade"></main>
+
+    <!-- Vendors -->
+    <script src="./assets/js/fawn.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.19/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/oclazyload/1.1.0/ocLazyLoad.require.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/oclazyload/1.1.0/ocLazyLoad.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-css/1.0.8/angular-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-animate.min.js"></script>
+    <!-- Database -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <!-- Bundle -->
+    <script src="./assets/js/bundle.js"></script>
+</body>
+
+</html>

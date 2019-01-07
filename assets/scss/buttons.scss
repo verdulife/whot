@@ -1,0 +1,112 @@
+//base
+a[class*="btn"],
+button {
+  cursor: pointer;
+  padding: 15px 30px !important;
+  background-color: transparent;
+  transition: 0.2s;
+}
+
+a[class*="pri"],
+button[class*="pri"] {
+  background-color: $pri;
+  color: #fff !important;
+  border: 2px solid $pri !important;
+  &:hover {
+    border-color: $pri-dark !important;
+  }
+}
+
+a[class*="sec"],
+button[class*="sec"] {
+  background-color: $sec;
+  color: #fff !important;
+  border: 2px solid $sec !important;
+  &:hover {
+    background-color: $sec-dark;
+    border-color: $sec-dark;
+  }
+}
+
+a[class*="ter"],
+button[class*="ter"] {
+  background-color: $ter;
+  color: #fff !important;
+  border: 2px solid $ter !important;
+  &:hover {
+    background-color: $ter-dark;
+    border-color: $ter-dark;
+  }
+}
+
+//colors
+a[class*="disabled"],
+button[class*="disabled"] {
+  background-color: $disabled;
+  color: #fff !important;
+  border: 2px solid $disabled !important;
+  color: $sub;
+  cursor: not-allowed !important;
+}
+
+a[class*="link"],
+button[class*="link"] {
+  background-color: $link;
+  color: #fff !important;
+  border: 2px solid $link;
+  &:hover {
+    background-color: darken($link, 20%);
+    border-color: darken($link, 20%);
+  }
+}
+
+a[class*="success"],
+button[class*="success"] {
+  background-color: $success;
+  color: #fff !important;
+  border: 2px solid $success;
+  &:hover {
+    background-color: darken($success, 20%);
+    border-color: darken($success, 20%);
+  }
+}
+
+a[class*="warning"],
+button[class*="warning"] {
+  background-color: $warning;
+  color: #fff !important;
+  border: 2px solid $warning;
+  &:hover {
+    background-color: darken($warning, 20%);
+    border-color: darken($warning, 20%);
+  }
+}
+
+a[class*="error"],
+button[class*="error"] {
+  background-color: $error;
+  color: #fff !important;
+  border: 2px solid $error;
+  &:hover {
+    background-color: darken($error, 20%);
+    border-color: darken($error, 20%);
+  }
+}
+
+//types
+a[class*="round"],
+button[class*="round"] {
+  border-radius: 50px;
+}
+
+a[class*="outline"],
+button[class*="outline"] {
+  background-color: transparent !important;
+  color: #000 !important;
+  border: 2px solid #000;
+  
+}
+
+a[class*="outline pri"] {
+  color: $pri !important;
+}

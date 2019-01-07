@@ -1,0 +1,53 @@
+.text-black {
+  color: #000 !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-disabled {
+  color: $disabled !important;
+  cursor: not-allowed;
+}
+
+.text-link {
+  color: $link !important;
+  cursor: pointer;
+}
+
+.text-success {
+  color: $success !important;
+}
+
+.text-warning {
+  color: $warning !important;
+}
+
+.text-error {
+  color: $error !important;
+}
+
+.text-title {
+  color: $title !important;
+}
+
+.text-content {
+  color: $content !important;
+}
+
+.text-sub {
+  color: $sub !important;
+}
+
+.text-pri {
+  color: $pri !important;
+}
+
+.text-sec {
+  color: $sec !important;
+}
+
+.text-ter {
+  color: $ter !important;
+}

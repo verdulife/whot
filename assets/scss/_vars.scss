@@ -1,0 +1,51 @@
+//colors
+$bg: #fafafa;
+$border: #dddee1;
+$divider: #e9eaec;
+$disabled: #bbbec4;
+
+//notificators
+$link: #2d8cf0;
+$success: #19be6b;
+$warning: #ff9900;
+$error: #ed3f14;
+
+//text
+$title: #1c2438;
+$sub: #80848f;
+$content: #495060;
+
+//custom
+$pri: #fa7268;
+$pri-light: lighten($pri, 20%);
+$pri-dark: darken($pri, 20%);
+
+$sec: #eaff19;
+$sec-light: lighten($sec, 20%);
+$sec-dark: darken($sec, 20%);
+
+$ter: #000;
+$ter-light: lighten($ter, 20%);
+$ter-dark: darken($ter, 20%);
+
+//gradient
+$pri2sec-linear: linear-gradient(45deg, $pri, $sec);
+$sec2pri-linear: linear-gradient(45deg, $sec, $pri);
+$pri2sec-radial: radial-gradient($pri, $sec);
+$sec2pri-radial: radial-gradient($sec, $pri);
+$pri2sec-conic: conic-gradient($pri, $sec);
+$sec2pri-conic: conic-gradient($sec, $pri);
+
+//responsive font
+@mixin type($minfont, $maxfont) {
+  font-size: calc(#{$minfont}px + (#{$maxfont} - #{$minfont}) * (100vw - 400px) / (1200 - 400));
+
+  & {
+    @media (max-width: 400px) {
+      font-size: #{$minfont}px;
+    }
+    @media (min-width: 1200px) {
+      font-size: #{$maxfont}px;
+    }
+  }
+}

@@ -1,0 +1,139 @@
+//parents
+.viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.scroll {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+//rows
+.row {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.row-r {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap-reverse row-reverse;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+//cols
+.col {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.col-r {
+  display: flex;
+  flex-flow: column-reverse;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flex {
+  display: flex;
+}
+
+.outer {
+  cursor: zoom-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.2;
+  z-index: 998;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 999;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.box {
+  background: #fff;
+  box-shadow: 0 2px 5px 0 rgba(#000, 0.1);
+  border-radius: 5px;
+}
+
+.h-div {
+  width: 100%;
+  height: 1px;
+  background: $border;
+}
+
+.v-div {
+  width: 1px;
+  height: 100%;
+  background: $border;
+}
+
+//CONTENT ALIGN
+.j-start {
+  justify-content: flex-start;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.j-end {
+  justify-content: flex-end;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+.j-around {
+  justify-content: space-around;
+}
+
+.a-start {
+  align-items: flex-start;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.a-end {
+  align-items: flex-end;
+}
+
+.f-center {
+  justify-content: center;
+  align-items: center;
+}
