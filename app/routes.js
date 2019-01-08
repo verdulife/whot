@@ -6,6 +6,7 @@ app.config(($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) => {
 
   $urlRouterProvider.otherwise("/home");
 
+  //HOMER
   $stateProvider.state("home", {
     name: "home",
     url: "/home",
@@ -29,6 +30,7 @@ app.config(($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) => {
     }
   });
   
+  //MENU
   $stateProvider.state("menu", {
     name: "menu",
     url: "/menu",
@@ -48,6 +50,30 @@ app.config(($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) => {
       },
       loadCtrl: $ocLazyLoad => {
         return $ocLazyLoad.load("./assets/js/menu.js");
+      }
+    }
+  });
+  
+  //FORM
+  $stateProvider.state("form", {
+    name: "form",
+    url: "/form",
+    controller: "formController",
+    templateUrl: "./app/form/form.html",
+    resolve: {
+      loadCss: $css => {
+        return $css.add([
+          {
+            href: "./assets/css/form.css"
+          },
+          {
+            href: "./assets/css/m.form.css",
+            media: "screen and (max-width : 768px)"
+          }
+        ]);
+      },
+      loadCtrl: $ocLazyLoad => {
+        return $ocLazyLoad.load("./assets/js/form.js");
       }
     }
   });

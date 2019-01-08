@@ -1,0 +1,50 @@
+@import "../../assets/scss/vars";
+
+.form-box {
+    .content {
+        height: 100%;
+    }
+
+    .left {
+        width: 200px;
+        height: 100%;
+        padding: 40px 0 40px 40px;
+
+        .logo {
+            width: 100px;
+        }
+
+        .back {
+            width: 100px;
+        }
+    }
+
+    .right {
+        width: calc(100% - 200px);
+        height: 100%;
+        padding: 40px;
+
+        label {
+            color: #fff;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+
+        input, select {
+            width: 100%;
+            background: $sec;
+            border-radius: 10px;
+            padding: 15px 20px !important;
+            color: $ter;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 20px;
+
+            &::placeholder {
+                color: $ter;
+            }
+        }
+    }
+}

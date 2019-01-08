@@ -22,14 +22,3 @@ app.factory("server", () => {
 
   return server;
 });
-
-/* app.factory("toaster", $timeout => {
-  let toast = function toaster(log, timer) {
-    $("body").append("<div class='toaster' style='position:fixed;top:20px;right:20px;padding:20px 30px;background:rgba(0, 0, 0, 0.9);color:#fff;-webkit-animation:fromRight .3s ease-out;animation:fromRight .3s ease-out;z-index:999'>" + log + "</>");
-    $timeout(() => {
-      $(".toaster").fadeOut("fast");
-    }, timer);
-  };
-
-  return toast;
-}); */

@@ -1,2 +1,2 @@
-"use strict";angular.module("app").controller("menuController",function($scope,$timeout){info("Menu loaded")});
+"use strict";angular.module("app").controller("menuController",function($scope,$state,server){info("Menu loaded"),server.db.collection("whots").get().then(function(snap){var data=[];snap.forEach(function(doc){var values=doc.data();values.id=doc.id,data.push(values)}),$scope.$apply(function(){$scope.cards=data,succ("Data obtained")})}),$scope.reload=function(){return $state.reload()}});
 //# sourceMappingURL=menu.js.map

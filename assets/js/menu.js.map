@@ -1,1 +1,1 @@
-{"version":3,"sources":["..\\..\\app\\menu\\menu.js"],"names":["angular","module","controller","$scope","$timeout"],"mappings":"aAAAA,QAAAC,OAAA,OAAAC,WAAA,iBAAA,SAAAC,OAAAC"}
+{"version":3,"sources":["..\\..\\app\\menu\\menu.js"],"names":["angular","module","controller","$scope","$state","server","db","collection","get","then","snap","data","id","values","succ","reload"],"mappings":"aAAAA,QAAAC,OAAA,OAAAC,WAAA,iBAAA,SAAAC,OAAAC,OAAAC,aAEA,sBAGAC,GAAAC,WACA,SACAC,MAAAC,KAAA,SAAAC,4DAIAC,qBACAC,aACAC,gDAGAF,KACAG,KAAA,4DAIAC"}

@@ -1,0 +1,23 @@
+<div class="form-box viewport">
+  <div class="row content">
+    <div class="left col j-between">
+      <img src="./assets/img/logo.svg" alt="whot" class="logo" />
+      <img
+        src="./assets/img/back.svg"
+        alt="back"
+        class="back"
+        ng-click="back()"
+      />
+    </div>
+
+    <form class="right col scroll">
+      <label>Título</label> <input type="text" placeholder="Añade un título" ng-model="whot.title"/>
+      <label>Tipo</label> <select ng-model="whot.type">
+          <option value="" disabled>Elige un tipo</option>
+          <option value="mimic">Mímica</option>
+          <option value="sing">Tararear</option>
+          <option value="tabu">Tabú</option>
+      </select>
+    </form>
+  </div>
+</div>

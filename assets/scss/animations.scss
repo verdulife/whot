@@ -50,6 +50,11 @@
     to {transform: translateY(100vh)}
 }
 
+@keyframes rotate180 {
+      from {transform: rotate(0deg)}
+      to {transform: rotate(180deg)}
+}
+
 @keyframes fromFlipX {
     from {transform: rotateX(90deg); position: absolute}
     to {transform: rotateX(0)}

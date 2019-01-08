@@ -1,50 +1,21 @@
 <div class="menu-box viewport">
-    <div class="row">
+    <div class="row j-between top">
         <img src="./assets/img/logo.svg" alt="whot" class="logo">
+        <img src="./assets/img/reload.svg" alt="reload" class="reload" ng-click="reload()">
     </div>
 
     <div class="row nowrap slider">
         <div class="wrapper">
-            <div class="card add-card col f-center">
+            <div class="card add-card col f-center" ui-sref="form">
                 <img src="./assets/img/add.svg" alt="add">
                 <p>Crear</p>
             </div>
         </div>
         
-        <div class="wrapper">
+        <div class="wrapper" ng-repeat="card in cards">
             <div class="card col f-center">
-                <img src="./assets/img/mimic.svg" alt="add">
-                <p>Ejemplo mímica</p>
-            </div>
-        </div>
-        <div class="wrapper">
-            <div class="card col f-center">
-                <img src="./assets/img/mimic.svg" alt="add">
-                <p>Ejemplo mímica</p>
-            </div>
-        </div>
-        <div class="wrapper">
-            <div class="card col f-center">
-                <img src="./assets/img/mimic.svg" alt="add">
-                <p>Ejemplo mímica</p>
-            </div>
-        </div>
-        <div class="wrapper">
-            <div class="card col f-center">
-                <img src="./assets/img/mimic.svg" alt="add">
-                <p>Ejemplo mímica</p>
-            </div>
-        </div>
-        <div class="wrapper">
-            <div class="card col f-center">
-                <img src="./assets/img/mimic.svg" alt="add">
-                <p>Ejemplo mímica</p>
-            </div>
-        </div>
-        <div class="wrapper">
-            <div class="card col f-center">
-                <img src="./assets/img/mimic.svg" alt="add">
-                <p>Ejemplo mímica</p>
+                <img ng-src="./assets/img/{{card.type}}.svg" alt="{{card.type}}">
+                <p>{{card.title}}</p>
             </div>
         </div>
 
