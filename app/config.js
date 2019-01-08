@@ -1,12 +1,16 @@
-const app = angular.module("app", ["oc.lazyLoad", "ui.router", "angularCSS", "ngAnimate"]);
+const app = angular.module("app", [
+  "oc.lazyLoad",
+  "ui.router",
+  "angularCSS",
+  "ngAnimate"
+]);
 
 //firebase auth
 firebase.initializeApp({
-  apiKey: "AIzaSyA-Q8d34UTHpaPVlM3lWdH2QLj5P7R5yqw",
-  authDomain: "fawn-test.firebaseapp.com",
-  databaseURL: "https://fawn-test.firebaseio.com",
-  projectId: "fawn-test",
-  storageBucket: "fawn-test.appspot.com",
-  messagingSenderId: "931880964179"
+  apiKey: "AIzaSyDPZFKTsxYUqNShRrTKIj6zPqTsvfq2-Sk",
+  authDomain: "whot-app.firebaseapp.com",
+  databaseURL: "https://whot-app.firebaseio.com",
+  projectId: "whot-app",
+  storageBucket: "",
+  messagingSenderId: "694627066943"
 });
-

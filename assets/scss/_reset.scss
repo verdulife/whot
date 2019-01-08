@@ -36,9 +36,13 @@ body {
   font-family: "Circular Std";
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 //enter view
 main.ng-enter {
-  animation: fadeIn .5s ease-out;
+  animation: fadeIn 0.5s ease-out;
 }
 
 //hyperlinks

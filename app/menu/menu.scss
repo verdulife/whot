@@ -10,15 +10,20 @@
         position: fixed;
         bottom: 0;
         left: 0;
-        height: 50%;
-        display: inline-flex;
-        padding: 10px 40px 40px 40px;
-        overflow-x: scroll !important;
+        width: 100%;
+        padding: 40px;
+        overflow-x: scroll;
         overflow-y: hidden;
 
-        .add-card {
-            background: $ter !important;
-            color: #fff;
+        .wrapper {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .fix {
+            display: inline-block;
+            min-width: 20px;
+            height: 150px;
         }
         
         .card {
@@ -29,7 +34,6 @@
             background-size: contain;
             overflow: hidden;
             border-radius: 10px;
-            margin-right: 20px;
             padding: 10px;
 
             img {
@@ -41,6 +45,11 @@
                 position: absolute;
                 bottom: 10px;
             }
+        }
+
+        .add-card {
+            background: $ter;
+            color: #fff;
         }
     }
 }
