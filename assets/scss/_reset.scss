@@ -32,6 +32,8 @@ main {
 
 body {
   font-family: "Circular Std";
+  background: url("../../assets/img/bg.svg") no-repeat center;
+  background-size: cover;
 }
 
 //Prevent defaul touch scroll
