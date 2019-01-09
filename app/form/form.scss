@@ -1,50 +1,94 @@
 @import "../../assets/scss/vars";
 
 .form-box {
-    .content {
-        height: 100%;
+  .content {
+    height: 100%;
+  }
+
+  .left {
+    width: 200px;
+    height: 100%;
+    padding: 45px 0 45px 45px;
+
+    .logo {
+      width: 100px;
     }
 
-    .left {
-        width: 200px;
-        height: 100%;
-        padding: 40px 0 40px 40px;
+    .back {
+      width: 100px;
+    }
+  }
 
-        .logo {
-            width: 100px;
-        }
+  .right {
+    width: calc(100% - 200px);
+    height: 100%;
+    padding: 45px;
 
-        .back {
-            width: 100px;
-        }
+    label {
+      color: #fff;
+      font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 10px;
+      padding-left: 20px;
     }
 
-    .right {
-        width: calc(100% - 200px);
-        height: 100%;
-        padding: 40px;
+    input,
+    select {
+      width: 100%;
+      background: $sec;
+      border-radius: 10px;
+      padding: 15px 20px !important;
+      color: $ter;
+      font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 30px;
 
-        label {
-            color: #fff;
-            font-weight: bold;
-            font-size: 24px;
-            margin-bottom: 10px;
-            padding-left: 20px;
-        }
-
-        input, select {
-            width: 100%;
-            background: $sec;
-            border-radius: 10px;
-            padding: 15px 20px !important;
-            color: $ter;
-            font-weight: bold;
-            font-size: 24px;
-            margin-bottom: 20px;
-
-            &::placeholder {
-                color: $ter;
-            }
-        }
+      &::placeholder {
+        color: $ter;
+      }
     }
+
+    .input-add {
+      width: calc(100% - 68px);
+      margin-right: 10px;
+    }
+
+    .add-whot {
+      width: 58px;
+      background: $ter;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    ul {
+      width: 100%;
+
+      li {
+        background: $ter;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      p {
+        font-size: 24px;
+        color: #fff;
+      }
+
+      span img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+      }
+    }
+
+    button {
+        background: $ter;
+        padding: 15px 20px;
+        color: $pri;
+        font-size: 24px;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+  }
 }

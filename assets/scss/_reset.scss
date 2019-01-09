@@ -31,9 +31,16 @@ main {
 }
 
 body {
+  font-family: "Circular Std";
+}
+
+//Prevent defaul touch scroll
+main {
+  position: fixed !important;
+  top: 0;
+  left: 0;
   background: url("../../assets/img/bg.svg") no-repeat center;
   background-size: cover;
-  font-family: "Circular Std";
 }
 
 ::-webkit-scrollbar {
@@ -49,6 +56,10 @@ main.ng-enter {
 a {
   color: $link;
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 //responsive base font

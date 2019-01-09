@@ -2,7 +2,7 @@
 
 .menu-box {
   .top {
-    padding: 40px;
+    padding: 45px;
 
     .logo {
       width: 100px;
@@ -10,7 +10,7 @@
 
     .reload {
       width: 40px;
-      animation: rotate180 .5s;
+      animation: rotate180 0.5s;
     }
   }
 
@@ -19,8 +19,9 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 40px;
+    padding: 45px;
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
     overflow-y: hidden;
 
     .wrapper {
@@ -36,8 +37,8 @@
 
     .card {
       position: relative;
-      width: 150px;
-      height: 150px;
+      width: 45vh;
+      height: 45vh;
       background: $sec url("../../assets/img/box-bg.svg") no-repeat right;
       background-size: contain;
       overflow: hidden;
@@ -45,7 +46,9 @@
       padding: 10px;
 
       img {
-        width: 60px;
+        width: 75px;
+        height: 75px;
+        object-fit: contain;
         margin-bottom: 10px;
       }
 

@@ -6,7 +6,7 @@ app.config(($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) => {
 
   $urlRouterProvider.otherwise("/home");
 
-  //HOMER
+  //HOME
   $stateProvider.state("home", {
     name: "home",
     url: "/home",
@@ -74,6 +74,31 @@ app.config(($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) => {
       },
       loadCtrl: $ocLazyLoad => {
         return $ocLazyLoad.load("./assets/js/form.js");
+      }
+    }
+  });
+
+  //OPTIONS
+  $stateProvider.state("options", {
+    name: "options",
+    url: "/options/:whot",
+    params: { whot: null },
+    controller: "optionsController",
+    templateUrl: "./app/options/options.html",
+    resolve: {
+      loadCss: $css => {
+        return $css.add([
+          {
+            href: "./assets/css/options.css"
+          },
+          {
+            href: "./assets/css/m.options.css",
+            media: "screen and (max-width : 768px)"
+          }
+        ]);
+      },
+      loadCtrl: $ocLazyLoad => {
+        return $ocLazyLoad.load("./assets/js/options.js");
       }
     }
   });

@@ -1,0 +1,32 @@
+<div class="options-box viewport">
+  <div class="row content">
+    <div class="left col j-between">
+      <img src="./assets/img/logo.svg" alt="whot" class="logo" />
+      <img
+        src="./assets/img/back.svg"
+        alt="back"
+        class="back"
+        ng-click="back()"
+      />
+    </div>
+
+    <div class="right col j-end">
+      <div class="title">{{ whot.title }}</div>
+      
+      <div class="row">
+        <select ng-model="game.time">
+          <option value="60">60 segundos</option>
+          <option value="90">90 segundos</option>
+          <option value="120">120 segundos</option>
+          <option value="150">150 segundos</option>
+          <option value="180">180 segundos</option>
+        </select>
+
+        <span class="flex f-center"><img src="./assets/img/edit.svg" alt="Edit"></span>
+        <span class="flex f-center"><img src="./assets/img/trash.svg" alt="Delete"></span>
+      </div>
+
+      <div class="row j-center play" ng-click="play(game)">Jugar</div>
+    </div>
+  </div>
+</div>

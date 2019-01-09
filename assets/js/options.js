@@ -1,0 +1,2 @@
+"use strict";angular.module("app").controller("optionsController",function($scope,$state,$stateParams,server){info("Options loaded"),$scope.back=function(){return $state.go("menu")},$scope.getWhot=$stateParams.whot,$scope.game={},server.db.collection("whots").doc($scope.getWhot).get().then(function(doc){$scope.$apply(function(){$scope.whot=doc.data(),succ("Data obtained"),$scope.game.time="60"})})});
+//# sourceMappingURL=options.js.map
