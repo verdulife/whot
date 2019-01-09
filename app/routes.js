@@ -57,7 +57,8 @@ app.config(($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) => {
   //FORM
   $stateProvider.state("form", {
     name: "form",
-    url: "/form",
+    url: "/form/:whot",
+    params: { whot: null },
     controller: "formController",
     templateUrl: "./app/form/form.html",
     resolve: {
@@ -99,6 +100,31 @@ app.config(($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) => {
       },
       loadCtrl: $ocLazyLoad => {
         return $ocLazyLoad.load("./assets/js/options.js");
+      }
+    }
+  });
+  
+  //GAME
+  $stateProvider.state("game", {
+    name: "game",
+    url: "/game/:whot/:time",
+    params: { whot: null, time: null },
+    controller: "gameController",
+    templateUrl: "./app/game/game.html",
+    resolve: {
+      loadCss: $css => {
+        return $css.add([
+          {
+            href: "./assets/css/game.css"
+          },
+          {
+            href: "./assets/css/m.game.css",
+            media: "screen and (max-width : 768px)"
+          }
+        ]);
+      },
+      loadCtrl: $ocLazyLoad => {
+        return $ocLazyLoad.load("./assets/js/game.js");
       }
     }
   });
