@@ -15,7 +15,12 @@
     }
 
     .back {
-      width: 100px;
+      background: $ter;
+      padding: 10px 15px !important;
+      color: $pri;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 10px;
     }
   }
 
@@ -51,6 +56,7 @@
     .input-add {
       width: calc(100% - 68px);
       margin-right: 10px;
+      margin-bottom: 0px;
     }
 
     .add-whot {
@@ -71,8 +77,12 @@
       }
 
       p {
+        width: calc(100% - 35px);
         font-size: 24px;
         color: #fff;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
       }
 
       span img {
@@ -83,12 +93,15 @@
     }
 
     button {
-        background: $ter;
-        padding: 15px 20px;
-        color: $pri;
-        font-size: 24px;
-        font-weight: bold;
-        border-radius: 10px;
+      position: fixed;
+      bottom: 103px;
+      left: 45px;
+      background: $ter;
+      padding: 10px 15px !important;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 10px;
     }
   }
 }

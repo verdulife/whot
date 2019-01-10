@@ -39,28 +39,40 @@
       position: relative;
       width: 45vh;
       height: 45vh;
-      background: $sec url("../../assets/img/box-bg.svg") no-repeat right;
-      background-size: contain;
+      background: $sec url("../../assets/img/box-bg.svg") no-repeat;
+      background-size: auto 105%;
+      background-position-x: 105%;
       overflow: hidden;
       border-radius: 10px;
       padding: 10px;
 
       img {
-        width: 75px;
-        height: 75px;
+        width: 60%;
+        height: 60%;
         object-fit: contain;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
 
       p {
+        width: 100%;
         position: absolute;
         bottom: 10px;
+        padding: 0 15px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: center;
       }
     }
 
     .add-card {
       background: $ter;
       color: #fff;
+
+      img {
+        width: 50%;
+        height: 50%;
+      }
     }
   }
 }

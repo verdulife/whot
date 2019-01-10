@@ -45,6 +45,19 @@ main {
   background-size: cover;
 }
 
+@media (orientation: portrait) {
+  body,
+  main {
+    background: url("../../assets/img/bg-turn.svg") no-repeat center;
+    background-size: cover;
+    touch-action: none;
+
+    * {
+      display: none;
+    }
+  }
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

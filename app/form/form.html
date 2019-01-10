@@ -1,18 +1,9 @@
 <div class="form-box viewport">
   <div class="row content">
-    <div class="left col j-between">
-      <img src="./assets/img/logo.svg" alt="whot" class="logo" />
-      <img
-        src="./assets/img/back.svg"
-        alt="back"
-        class="back"
-        ng-click="back()"
-      />
-    </div>
+    <div class="left col j-between"><img src="./assets/img/logo.svg" alt="whot" class="logo" /> <button class="back" ng-click="back()">Cancelar</button></div>
 
     <form class="right scroll" ng-submit="pushWhot(whot)">
-      <label>Título</label>
-      <input type="text" placeholder="Añade un título" ng-model="whot.title" />
+      <label>Título</label> <input type="text" placeholder="Añade un título" ng-model="whot.title" />
 
       <label>Tipo</label>
       <select ng-model="whot.type">
@@ -24,32 +15,14 @@
 
       <label>Whots</label>
       <ul ng-show="whot.whots.length > 0">
-        <li
-          class="row j-between a-center"
-          ng-repeat="(key, value) in whot.whots"
-        >
+        <li class="row j-between a-center" ng-repeat="(key, value) in whot.whots">
           <p>{{ value }}</p>
-          <span ng-click="delWhot(key)"
-            ><img src="./assets/img/trash.svg" alt="Delete"
-          /></span>
+          <span ng-click="delWhot(key)"><img src="./assets/img/trash.svg" alt="Delete"/></span>
         </li>
       </ul>
-      <div class="row">
-        <input
-          class="input-add"
-          type="text"
-          placeholder="Añade un whot"
-          ng-model="newWhot"
-        />
-        <img
-          src="./assets/img/add.svg"
-          class="add-whot"
-          ng-click="addWhot(newWhot)"
-        />
-      </div>
+      <div class="row"><input class="input-add" type="text" placeholder="Añade un whot" ng-model="newWhot" /> <img src="./assets/img/add.svg" class="add-whot" ng-click="addWhot(newWhot)" /></div>
 
-      <button ng-hide="getWhot">Crear</button>
-      <button ng-show="getWhot">Actualizar</button>
+      <button ng-hide="getWhot">Crear</button> <button ng-show="getWhot">Aceptar</button>
     </form>
   </div>
 </div>

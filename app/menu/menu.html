@@ -12,7 +12,7 @@
             </div>
         </div>
         
-        <div class="wrapper" ng-repeat="card in cards" ng-click="getId(card)">
+        <div class="wrapper" ng-repeat="card in cards | orderBy: 'id'" ng-click="getId(card)">
             <div class="card col f-center">
                 <img ng-src="./assets/img/{{card.type}}.svg" alt="{{card.type}}">
                 <p>{{card.title}}</p>
