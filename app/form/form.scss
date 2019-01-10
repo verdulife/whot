@@ -14,13 +14,18 @@
       width: 100px;
     }
 
-    .back {
+    button {
       background: $ter;
       padding: 10px 15px !important;
-      color: $pri;
+      color: #fff;
       font-size: 20px;
       font-weight: bold;
       border-radius: 10px;
+
+      &:last-of-type {
+        color: $pri;
+        margin-top: 20px;
+      }
     }
   }
 
@@ -90,18 +95,6 @@
         height: 20px;
         object-fit: contain;
       }
-    }
-
-    button {
-      position: fixed;
-      bottom: 103px;
-      left: 45px;
-      background: $ter;
-      padding: 10px 15px !important;
-      color: #fff;
-      font-size: 20px;
-      font-weight: bold;
-      border-radius: 10px;
     }
   }
 }

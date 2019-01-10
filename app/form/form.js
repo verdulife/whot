@@ -1,6 +1,6 @@
 angular
   .module("app")
-  .controller("formController", function($scope, $state, $stateParams, server) {
+  .controller("formController", function($scope, $timeout, $state, $stateParams, server) {
     info("Form loaded");
 
     $scope.back = () => $state.go("menu");
@@ -12,6 +12,7 @@ angular
     $scope.addWhot = newWhot => {
       $scope.whot.whots.push(newWhot);
       $scope.newWhot = null;
+      $timeout(() => _(".right").scrollBy(0, 100));
     };
 
     $scope.delWhot = key => {
