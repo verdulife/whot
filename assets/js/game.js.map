@@ -1,1 +1,1 @@
-{"version":3,"sources":["..\\..\\app\\game\\game.js"],"names":["angular","module","controller","$scope","$state","$stateParams","whot"],"mappings":"aAAAA,QAAAC,OAEA,OAAAC,WAAA,iBACA,SACAC,OACAC,OACAC,mBAEA,uDAEA,qCACAC"}
+{"version":3,"sources":["../../app/game/game.js"],"names":["angular","module","controller","$scope","$state","$stateParams","whot","innerHTML","e","accelerationIncludingGravity","z"],"mappings":"aAAAA,QAAAC,OAEA,OAAAC,WAAA,iBAAA,SAAAC,OAAAC,OAAAC,mBAGA,uDACA,qCACAC,yGAIAC,UAAAC,EAAAC,6BAEAC,2DAEA,sDACA,qDACA,oEAEA,sDACA,0DAGA,yDACA,sDAHA"}
