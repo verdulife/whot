@@ -1,9 +1,19 @@
 <div class="game-box viewport">
-  <div class="row f-center" ng-click="back()">
-    <h1 id="wait">¡Mueveme!</h1>
-    <h1 id="front">¡Correcto!</h1>
-    <h1 id="back">Paso...</h1>
-
-    <span id="accelerationZ"></span>
+  <div class="row j-between topbar">
+    <div class="flex f-center type">
+      <img ng-src="./assets/img/{{ whot.type }}.svg" alt="Tipo" />
+    </div>
+    <span id="timer"></span>
+    <div class="flex f-center close" ng-click="back()">
+      <img src="./assets/img/close.svg" alt="Cerrar" />
+    </div>
   </div>
+
+  <div class="content col a-center">
+    <h1 id="wait">{{ random }}</h1>
+    <h1 id="hit">¡Correcto!</h1>
+    <h1 id="pass">Paso...</h1>
+  </div>
+
+  <div class="row j-center acc"><span id="accelerationZ"></span></div>
 </div>
