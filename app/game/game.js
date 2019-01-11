@@ -12,7 +12,7 @@ angular
 
     $scope.back = () => $state.go("menu");
     $scope.getWhot = $stateParams.whot;
-    let time = $stateParams.time;
+    let time = 10;
     let timer = document.getElementById("timer");
     let zAxis = document.getElementById("accelerationZ");
 
@@ -24,9 +24,9 @@ angular
         $scope.whot = doc.data();
         succ("Data obtained");
 
-        $timeout(() => $scope.message = "Preparados...");
-        $timeout(() => $scope.message = "Listos...", 1000);
-        $timeout(() => $scope.message = "¡Ya!", 2000);
+        $timeout(() => ($scope.message = "Preparados..."));
+        $timeout(() => ($scope.message = "Listos..."), 1000);
+        $timeout(() => ($scope.message = "¡Ya!"), 2000);
 
         let countDown = $timeout(() => {
           let random = Math.floor(Math.random() * $scope.whot.whots.length);
@@ -38,38 +38,66 @@ angular
               time -= 1;
               timer.innerHTML = time;
             } else {
-              $timeout(
-                () => (timer.innerHTML = "¡Tiempo!"),
-                100
-              );
+              $timeout(() => (timer.innerHTML = "¡Tiempo!"), 100);
+              $timeout(() => ($scope.message = rigthWhots));
             }
           }, 1000);
-
         }, 3000);
+
+        let rightState = false;
+        let wrongState = false;
+
+        let rightFn = () => {
+          rightState = true;
+          wrongState = false;
+
+          if (rightState === true) {
+            let random = Math.floor(Math.random() * $scope.whot.whots.length);
+            $scope.message = "¡Correcto!";
+            $timeout(() => ($scope.message = $scope.whot.whots[random]), 1000);
+            rigthWhots.push($scope.whot.whots[random]);
+          }
+
+          let saveFn = rightFn;
+
+          $timeout(() => {
+            rightFn = saveFn;
+          }, 1500);
+
+          rightFn = null;
+        };
+
+        let wrongFn = () => {
+          rightState = false;
+          wrongState = true;
+
+          if (wrongState === true) {
+            let random = Math.floor(Math.random() * $scope.whot.whots.length);
+            $scope.message = "Paso...";
+            $timeout(() => ($scope.message = $scope.whot.whots[random]), 1000);
+            wrongWhots.push($scope.whot.whots[random]);
+          }
+
+          let saveFn = wrongFn;
+
+          $timeout(() => {
+            wrongFn = saveFn;
+          }, 1500);
+
+          worngFn = null;
+        };
+
+        let rigthWhots = [];
+        let wrongWhots = [];
 
         window.ondevicemotion = function(e) {
           zAxis.innerHTML = e.accelerationIncludingGravity.z;
-          let random = Math.floor(Math.random() * $scope.whot.whots.length);
-          let rigthWhots = [];
-          let wrongWhots = [];
+          let zDeg = e.accelerationIncludingGravity.z;
 
-          if (zAxis <= -5) {
-            let wrong = true;
-            if ((wrong = true)) {
-              wait.style.display = "none";
-              hit.style.display = "none";
-              pass.style.display = "inherit";
-              $scope.message = $scope.whot.whots[random];
-            }
-          } else if (zAxis >= 4) {
-            wait.style.display = "none";
-            hit.style.display = "inherit";
-            pass.style.display = "none";
-            $scope.message = $scope.whot.whots[random];
-          } else {
-            wait.style.display = "inherit";
-            hit.style.display = "none";
-            pass.style.display = "none";
+          if (zDeg >= 4) {
+            rightFn();
+          } else if (zDeg <= -5) {
+            wrongFn();
           }
         };
       });
